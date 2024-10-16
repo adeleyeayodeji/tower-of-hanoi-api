@@ -38,7 +38,7 @@ final class Loader extends Base
 	 * @var float
 	 *
 	 */
-	public $php_version = '7.4';
+	public $php_version = '8.0';
 
 	/**
 	 * Minimum WordPress version.
@@ -86,8 +86,8 @@ final class Loader extends Base
 		global $wp_version;
 
 		return (
-			version_compare(PHP_VERSION, $this->php_version, '>') &&
-			version_compare($wp_version, $this->wp_version, '>')
+			version_compare(PHP_VERSION, $this->php_version, '>=') &&
+			version_compare($wp_version, $this->wp_version, '>=')
 		);
 	}
 
