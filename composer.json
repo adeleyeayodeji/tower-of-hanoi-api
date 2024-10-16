@@ -1,0 +1,60 @@
+{
+  "name": "tower-of-hanoi-api/tower-of-hanoi-api",
+  "description": "A plugin for managing tower of hanoi.",
+  "type": "project",
+  "config": {
+    "platform": {
+      "php": "8.0"
+    },
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "roots/wordpress-core-installer": true
+    },
+    "preferred-install": "dist",
+    "archive": {
+      "exclude": [
+        "tests",
+        "bin",
+        "docs",
+        "*.md",
+        ".*",
+        ".zip",
+        ".log",
+        ".txt",
+        ".md",
+        ".dist"
+      ]
+    }
+  },
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Adeleye Ayodeji",
+      "homepage": "https://adeleyeayodeji.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.0"
+  },
+  "require-dev": {
+    "wp-coding-standards/wpcs": "^3.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+    "phpcompatibility/phpcompatibility-wp": "^2.1",
+    "phpunit/phpunit": "^9",
+    "wp-phpunit/wp-phpunit": "^5",
+    "yoast/phpunit-polyfills": "^1.0",
+    "roots/wordpress": "^6.0"
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "autoload": {
+    "files": [
+      "app/helpers/helper.php"
+    ],
+    "classmap": [
+      "core/",
+      "app/"
+    ]
+  }
+}
